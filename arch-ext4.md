@@ -29,6 +29,11 @@ useradd -m -g users -G wheel,audio,video -s /bin/bash username
 passwd root
 passwd username
 EDITOR=nano visudo (remove # from #wheel)
+nano /etc/locale.gen
+
+#remove # from de_DE.UTF-8
+
+locale-gen
 
 grub-mkconfig -o /boot/grub/grub.cfg
 grub-install /dev/sda
