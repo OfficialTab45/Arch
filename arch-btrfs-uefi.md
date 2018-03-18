@@ -81,7 +81,7 @@ sudo pacman -S xorg xorg-server xorg-xinit
 
 sudo pacman -S lightdm lightdm-gtk-greeter
 
-sudo pacman -S xfce4 xfce4-goodies
+sudo pacman -S xfce4 xfce4-goodies 
 
 sudo systemctl enable lightdm.service
 
