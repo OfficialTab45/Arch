@@ -59,6 +59,12 @@ passwd root
 passwd username
 EDITOR=nano visudo (remove # from #wheel)
 
+nano /etc/locale.gen
+
+#remove # from de_DE.UTF-8
+
+locale-gen
+
 grub-mkconfig -o /boot/grub/grub.cfg
 
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
@@ -81,7 +87,7 @@ sudo pacman -S xorg xorg-server xorg-xinit
 
 sudo pacman -S lightdm lightdm-gtk-greeter
 
-sudo pacman -S xfce4 xfce4-goodies 
+sudo pacman -S xfce4 xfce4-goodies
 
 sudo systemctl enable lightdm.service
 
