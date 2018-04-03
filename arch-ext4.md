@@ -15,7 +15,7 @@ nano /etc/pacman.d/mirrorlist
 
 pacstrap /mnt base base-devel grub gvfs bash-completion
 
-genfstab -Lp /mnt >> /mnt/etc/genfstab
+genfstab -Lp /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
 
