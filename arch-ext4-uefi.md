@@ -1,19 +1,21 @@
 loadkeys de
 
-gdisk /dev/sda
+gdisk /dev/sdb
 
 boot 300M
 efi 100M
 
+mkfs.ext4 -L BOOT /dev/sdb1
+mkfs.vfat -F 32 -n EFI /dev/sdb2
+mkfs.ext4 -L ROOT /dev/sdb3
+mkswap -L SWAP /dev/sdb4
 
-mkfs.ext4 -L BOOT /dev/sda1
-mkfs.vfat -F 32 -n EFI /dev/sda2
-mkfs.ext4 -L ROOT /dev/sda3
-mkswap -L SWAP /dev/sda4
-
-mount /dev/sda2 /mnt
+mount /dev/sdb3 /mnt
 mkdir /mnt/boot
-mount /dev/sda1 /mnt/boot
+mkdir /mnt/home
+mount /dev/sdb1 /mnt/boot
+gdisk /dev/sda1 (hdd)
+mount /dev/sda1 /mnt/home
 swapon /dev/sda3
 
 nano /etc/pacman.d/mirrorlist
