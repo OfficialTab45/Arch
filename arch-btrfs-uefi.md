@@ -43,7 +43,7 @@ mount -o noatime,space_cache=v2,compress=lzo,subvol=@home /dev/sdb1 /mnt/home
 mount -o noatime,ssd,space_cache=v2,compress=lzo,subvolid=5 /dev/sda3 /mnt/btrfs
 mount -o noatime,space_cache=v2,compress=lzo,subvolid=5 /dev/sdb1 /mnt/pool
 
-pacstrap /mnt base base-devel grub btrfs-progs bash-completion efibootmgr dosfstools
+pacstrap /mnt base base-devel grub btrfs-progs bash-completion efibootmgr dosfstools wpa_supplicant
 genfstab -Lp /mnt >> /mnt/etc/fstab
 
 arch-chroot /mnt
