@@ -22,7 +22,7 @@ swapon /dev/sda3
 
 nano /etc/pacman.d/mirrorlist
 
-pacstrap /mnt base base-devel grub gvfs bash-completion efibootmgr linux linux-firmware
+pacstrap /mnt base base-devel grub gvfs bash-completion efibootmgr linux linux-firmware wpa_supplicant
 
 genfstab -Lp /mnt >> /mnt/etc/genfstab
 
