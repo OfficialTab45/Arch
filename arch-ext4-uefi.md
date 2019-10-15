@@ -60,8 +60,13 @@ sudo pacman -S lightdm lightdm-gtk-greeter
 
 sudo pacman -S xfce4 xfce4-goodies
 
+####### Driver
+only VM
+sudo pacman -S virtualbox-guest-utils
+###########
+sudo pacman -S nvidia nvidia-settings
+###########
 sudo systemctl enable lightdm.service
-
 
 sudo pacman -S networkmanager network-manager-applet nm-connection-editor
 sudo pacman -S alsa-tools alsa-utils pulseaudio-alsa pavucontrol
