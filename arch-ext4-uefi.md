@@ -43,9 +43,12 @@ nano /etc/locale.gen
 #remove # from de_DE.UTF-8
 
 locale-gen
-
 mkdir /boot/grub
 grub-mkconfig -o /boot/grub/grub.cfg
+### BIOS ###
+grub-install /dev/sdX
+
+### UEFI ###
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 
 sudo pacman -S acpid ntp cronie avahi
@@ -61,7 +64,7 @@ sudo pacman -S lightdm lightdm-gtk-greeter
 sudo pacman -S xfce4 xfce4-goodies
 
 ####### Driver
-only VM
+#Only VM
 sudo pacman -S virtualbox-guest-utils
 ###########
 sudo pacman -S nvidia nvidia-settings
