@@ -46,7 +46,7 @@ locale-gen
 
 mkdir /boot/grub
 grub-mkconfig -o /boot/grub/grub.cfg
-grub-install --target=x86_64-efi --efi-directory=/boot/ --bootloader-id=grub
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub
 
 sudo pacman -S acpid ntp cronie avahi
 
