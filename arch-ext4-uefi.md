@@ -1,3 +1,5 @@
+UPDATED
+
 loadkeys de
 
 gdisk /dev/sdb
@@ -20,7 +22,7 @@ swapon /dev/sda3
 
 nano /etc/pacman.d/mirrorlist
 
-pacstrap /mnt base base-devel grub gvfs bash-completion efibootmgr
+pacstrap /mnt base base-devel grub gvfs bash-completion efibootmgr linux linux-firmware
 
 genfstab -Lp /mnt >> /mnt/etc/genfstab
 
